@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="js/script.js"></script>-->
+    <script src="js/jquery-1.11.3.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <p class="catOne"><span class="catHeaderOne"></span></p>
+    </div>
+    <div>
+      <p class="catOne">Click Count= <span class="catCounterOne">0</span></p>
+    </div>
+    <div id="catOne">
+      <img class="cat" id="hobbitcat" width="525" height="300"src="images/hobbitthecat.jpg">
+    </div>
+    <div>
+      <p class="catTwo"><span class="catHeaderTwo"></span></p>
+    </div>
+    <div>
+      <p class="catTwo">Click Count= <span class="catCounterTwo">0</span></p>
+    </div>
+    <div id="catTwo">
+      <img class="cat" id="hobbitthecat" width="525" height="300"src="images/hobbitthecat2.jpg">
+    </div>
+  <script>
+
+    var clickCount = 0;
+
+    var catImage = document.getElementById("hobbitcat");
+    catImage.addEventListener('click', function(){
+      clickCount += 1;
+      console.log(clickCount);
+      $('.catCounterOne').text(clickCount);
+    }, false);
+
+    $('.catHeaderOne').text('Hobbit');
+
+    var catImageTwo = document.getElementById("hobbitthecat");
+    catImageTwo.addEventListener('click', function(){
+      clickCount += 1;
+      console.log(clickCount);
+      $('.catCounterTwo').text(clickCount);
+    }, false);
+
+    $('.catHeaderTwo').text('Hobbit The Cat');
+  </script>
+  </body>
+</html>
